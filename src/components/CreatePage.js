@@ -14,18 +14,7 @@ class CreatePage extends React.Component {
 
   onCodeChange = (newCode) => this.setState({ code : newCode });
   onModeChange = ({ value }) => this.setState({ mode: value });
-  onCodeChange(newCode) {
-    this.setState({
-      code : newCode,
-    });
-  }
-
-  onModeChange({ value }) {
-    this.setState({
-      mode : value,
-    });
-  }
-
+  
   componentWillMount() {
     require.ensure([], (require) => {
       require('brace/mode/javascript');
